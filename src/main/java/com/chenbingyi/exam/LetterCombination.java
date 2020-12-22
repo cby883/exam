@@ -66,11 +66,12 @@ public class LetterCombination {
         }
         //不为空，则和子字符串序列构造结果字符串集合
         List<String> result = new ArrayList<>();
-        for (String s1 : strList) {
-            for (String s2 : subResult) {
-                result.add(s1 + s2);
-            }
-        }
+        //构造结果
+        strList.forEach(s1->{
+            subResult.forEach(s2->{
+                result.add(s1+s2);
+            });
+        });
         //缓存结果数据
         data.put(arr.toString(), result);
         return result;
