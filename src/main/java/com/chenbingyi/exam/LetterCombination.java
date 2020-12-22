@@ -67,9 +67,9 @@ public class LetterCombination {
         //不为空，则和子字符串序列构造结果字符串集合
         List<String> result = new ArrayList<>();
         //构造结果
-        strList.forEach(s1->{
-            subResult.forEach(s2->{
-                result.add(s1+s2);
+        strList.forEach(s1 -> {
+            subResult.forEach(s2 -> {
+                result.add(s1 + s2);
             });
         });
         //缓存结果数据
@@ -79,7 +79,7 @@ public class LetterCombination {
 
     public static void main(String[] args) {
         LetterCombination letterCombination = new LetterCombination();
-        List<Integer> arr1 = Arrays.asList(10, 0,2,19,3);
+        List<Integer> arr1 = Arrays.asList(10, 0, 2, 19, 3);
         List<String> ll = letterCombination.combination(arr1);
         System.out.println(ll);
 
